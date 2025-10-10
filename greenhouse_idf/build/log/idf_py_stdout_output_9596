@@ -1,0 +1,524 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:6276
+load:0x40078000,len:15736
+load:0x40080400,len:4
+load:0x40080404,len:3860
+entry 0x4008063c
+[0;32mI (29) boot: ESP-IDF v5.4.2 2nd stage bootloader[0m
+[0;32mI (29) boot: compile time Oct  3 2025 00:00:35[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (31) boot: chip revision: v3.1[0m
+[0;32mI (34) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (37) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (41) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (49) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (58) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (64) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (71) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (77) boot: End of partition table[0m
+[0;32mI (81) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1dd48h (122184) map[0m
+[0;32mI (130) esp_image: segment 1: paddr=0002dd70 vaddr=3ff80000 size=0001ch (    28) load[0m
+[0;32mI (130) esp_image: segment 2: paddr=0002dd94 vaddr=3ffb0000 size=02284h (  8836) load[0m
+[0;32mI (137) esp_image: segment 3: paddr=00030020 vaddr=400d0020 size=9d840h (645184) map[0m
+[0;32mI (362) esp_image: segment 4: paddr=000cd868 vaddr=3ffb2284 size=01e28h (  7720) load[0m
+[0;32mI (365) esp_image: segment 5: paddr=000cf698 vaddr=40080000 size=187e8h (100328) load[0m
+[0;32mI (416) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (416) boot: Disabling RNG early entropy source...[0m
+[0;32mI (427) cpu_start: Multicore app[0m
+[0;32mI (435) cpu_start: Pro cpu start user code[0m
+[0;32mI (435) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (435) app_init: Application information:[0m
+[0;32mI (435) app_init: Project name:     greenhouse_idf[0m
+[0;32mI (440) app_init: App version:      1[0m
+[0;32mI (443) app_init: Compile time:     Oct  2 2025 23:57:28[0m
+[0;32mI (448) app_init: ELF file SHA256:  bf758f332...[0m
+[0;32mI (453) app_init: ESP-IDF:          v5.4.2[0m
+[0;32mI (456) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (460) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (464) efuse_init: Chip rev:         v3.1[0m
+[0;32mI (468) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (474) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (479) heap_init: At 3FFB8740 len 000278C0 (158 KiB): DRAM[0m
+[0;32mI (485) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (490) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (496) heap_init: At 400987E8 len 00007818 (30 KiB): IRAM[0m
+[0;32mI (502) spi_flash: detected chip: generic[0m
+[0;32mI (504) spi_flash: flash io: dio[0m
+[0;33mW (507) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (521) main_task: Started on CPU0[0m
+[0;32mI (531) main_task: Calling app_main()[0m
+[0;32mI (531) GREENHOUSE: Starting Greenhouse Monitoring System[0m
+[0;32mI (551) gpio: GPIO[14]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (551) gpio: GPIO[27]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (561) GREENHOUSE: ADC calibration (line fitting) initialized[0m
+[0;32mI (571) wifi:wifi driver task: 3ffc0834, prio:23, stack:6656, core=0[0m
+[0;32mI (581) wifi:wifi firmware version: bea31f3[0m
+[0;32mI (581) wifi:wifi certification version: v7.0[0m
+[0;32mI (581) wifi:config NVS flash: enabled[0m
+[0;32mI (581) wifi:config nano formatting: disabled[0m
+[0;32mI (591) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (591) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (601) wifi:Init management short buffer num: 32[0m
+[0;32mI (601) wifi:Init dynamic tx buffer num: 32[0m
+[0;32mI (601) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (611) wifi:Init static rx buffer num: 10[0m
+[0;32mI (611) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (621) wifi_init: rx ba win: 6[0m
+[0;32mI (621) wifi_init: accept mbox: 6[0m
+[0;32mI (621) wifi_init: tcpip mbox: 32[0m
+[0;32mI (621) wifi_init: udp mbox: 6[0m
+[0;32mI (631) wifi_init: tcp mbox: 6[0m
+[0;32mI (631) wifi_init: tcp tx win: 5760[0m
+[0;32mI (631) wifi_init: tcp rx win: 5760[0m
+[0;32mI (641) wifi_init: tcp mss: 1440[0m
+[0;32mI (641) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (641) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (651) phy_init: phy_version 4860,6b7a6e5,Feb  6 2025,14:47:07[0m
+[0;33mW (651) phy_init: failed to load RF calibration data (0xffffffff), falling back to full calibration[0m
+[0;32mI (731) phy_init: Saving new calibration data due to checksum failure or outdated calibration data, mode(2)[0m
+[0;32mI (751) wifi:mode : sta (00:4b:12:90:7d:d4)[0m
+[0;32mI (751) wifi:enable tsf[0m
+I (751) GREENHOUSE: Wi-Fi initialization finished.
+[1;31mE (761) esp-tls: couldn't get hostname for :demo.thingsboard.io: getaddrinfo() returns 202, addrinfo=0x0[0m
+[1;31mE (761) transport_base: Failed to open a new connection: 32769[0m
+[1;31mE (771) mqtt_client: Error transport connect[0m
+[0;32mI (771) wifi:new:<1,0>, old:<1,0>, ap:<255,255>, sta:<1,0>, prof:1, snd_ch_cfg:0x0I (771) GREENHOUSE: MQTT Error[0m
+
+[0;32mI (781) GREENHOUSE: MQTT Disconnected[0m
+[0;32mI (781) wifi:state: init -> auth (0xb0)[0m
+[0;32mI (831) wifi:state: auth -> assoc (0x0)[0m
+[0;32mI (841) wifi:state: assoc -> run (0x10)[0m
+[0;32mI (881) wifi:connected with bunleab, aid = 9, channel 1, BW20, bssid = 32:e3:a4:0c:f5:b2[0m
+[0;32mI (891) wifi:security: WPA2-PSK, phy: bgn, rssi: -31[0m
+[0;32mI (891) wifi:pm start, type: 1[0m
+
+[0;32mI (891) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (951) wifi:AP's beacon interval = 102400 us, DTIM period = 3[0m
+[0;32mI (3181) esp_netif_handlers: sta ip: 192.168.137.200, mask: 255.255.255.0, gw: 192.168.137.1[0m
+[0;32mI (3181) GREENHOUSE: Got IP: 192.168.137.200[0m
+[0;32mI (3181) main_task: Returned from app_main()[0m
+[0;32mI (13931) GREENHOUSE: MQTT Connected[0m
+[1;31mE (13951) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (14171) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (14391) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (14611) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (14831) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (15031) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (15051) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (15271) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (15491) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (15711) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (15931) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (16131) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (16131) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (16131) GREENHOUSE: Fan: OFF[0m
+[0;32mI (16131) GREENHOUSE: Pump: OFF[0m
+[0;32mI (16131) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (16171) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (16391) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (16611) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (16831) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (17051) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (17251) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (17271) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (17491) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (17711) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (17931) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (18151) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (18351) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (18351) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (18351) GREENHOUSE: Fan: OFF[0m
+[0;32mI (18351) GREENHOUSE: Pump: OFF[0m
+[0;32mI (18351) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (18391) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (18611) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (18831) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (19051) DHT: Initialization error, problem in phase 'B'[0m
+[0;32mI (19101) wifi:<ba-add>idx:0 (ifx:0, 32:e3:a4:0c:f5:b2), tid:0, ssn:12, winSize:64[0m
+[1;31mE (19271) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (19471) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (19491) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (19711) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (19931) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (20151) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (20371) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (20571) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (20571) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (20571) GREENHOUSE: Fan: OFF[0m
+[0;32mI (20571) GREENHOUSE: Pump: OFF[0m
+[0;32mI (20571) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (20611) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (20831) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (21051) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (21271) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (21491) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (21691) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (21711) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (21931) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (22151) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (22371) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (22591) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (22791) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (22791) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (22791) GREENHOUSE: Fan: OFF[0m
+[0;32mI (22791) GREENHOUSE: Pump: OFF[0m
+[0;32mI (22791) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (23201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (23421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (23641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (23861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (24081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (24281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (24301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (24521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (24741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (24961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (25181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (25381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (25381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (25381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (25381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (25381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (28201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (28421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (28641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (28861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (29081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (29281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (29301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (29521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (29741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (29961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (30181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (30381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (30381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (30381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (30381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (30381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (33201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (33421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (33641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (33861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (34081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (34281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (34301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (34521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (34741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (34961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (35181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (35381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (35381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (35381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (35381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (35381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (38201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (38421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (38641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (38861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (39081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (39281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (39301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (39521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (39741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (39961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (40181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (40381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (40381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (40381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (40381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (40381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (43201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (43421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (43641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (43861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (44081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (44281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (44301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (44521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (44741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (44961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (45181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (45381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (45381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (45381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (45381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (45381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (48201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (48421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (48641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (48861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (49081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (49281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (49301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (49521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (49741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (49961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (50181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (50381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (50381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (50381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (50381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (50381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (53201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (53421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (53641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (53861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (54081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (54281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (54301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (54521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (54741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (54961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (55181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (55381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (55381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (55381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (55381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (55381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (58201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (58421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (58641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (58861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (59081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (59281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (59301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (59521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (59741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (59961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (60181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (60381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (60381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (60381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (60381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (60381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (63201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (63421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (63641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (63861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (64081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (64281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (64301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (64521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (64741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (64961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (65181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (65381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (65381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (65381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (65381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (65381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (68201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (68421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (68641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (68861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (69081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (69281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (69301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (69521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (69741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (69961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (70181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (70381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (70381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (70381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (70381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (70381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (73201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (73421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (73641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (73861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (74081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (74281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (74301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (74521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (74741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (74961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (75181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (75381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (75381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (75381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (75381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (75381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (78201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (78421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (78641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (78861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (79081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (79281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (79301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (79521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (79741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (79961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (80181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (80381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (80381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (80381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (80381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (80381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (83201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (83421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (83641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (83861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (84081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (84281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (84301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (84521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (84741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (84961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (85181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (85381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (85381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (85381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (85381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (85381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (88201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (88421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (88641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (88861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (89081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (89281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (89301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (89521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (89741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (89961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (90181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (90381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (90381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (90381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (90381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (90381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (93201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (93421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (93641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (93861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (94081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (94281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (94301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (94521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (94741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (94961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (95181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (95381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (95381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (95381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (95381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (95381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (98201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (98421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (98641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (98861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (99081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (99281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (99301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (99521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (99741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (99961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (100181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (100381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (100381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (100381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (100381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (100381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (103201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (103421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (103641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (103861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (104081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (104281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (104301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (104521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (104741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (104961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (105181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (105381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (105381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (105381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (105381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (105381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (108201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (108421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (108641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (108861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (109081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (109281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (109301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (109521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (109741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (109961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (110181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (110381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (110381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (110381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (110381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (110381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (113201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (113421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (113641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (113861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (114081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (114281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (114301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (114521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (114741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (114961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (115181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (115381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (115381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (115381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (115381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (115381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (118201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (118421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (118641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (118861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (119081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (119281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (119301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (119521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (119741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (119961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (120181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (120381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (120381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (120381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (120381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (120381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (123201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (123421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (123641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (123861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (124081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (124281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (124301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (124521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (124741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (124961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (125181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (125381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (125381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (125381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (125381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (125381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
+[1;31mE (128201) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (128421) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (128641) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (128861) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (129081) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (129281) GREENHOUSE: Failed to read temperature after 5 attempts[0m
+[1;31mE (129301) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (129521) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (129741) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (129961) DHT: Initialization error, problem in phase 'B'[0m
+[1;31mE (130181) DHT: Initialization error, problem in phase 'B'[0m
+[0;33mW (130381) GREENHOUSE: Failed to read humidity after 5 attempts[0m
+[0;32mI (130381) GREENHOUSE: Temperature: 0.0°C, Humidity: 0.0%, Soil raw: 4095, Soil: 0.0%[0m
+[0;32mI (130381) GREENHOUSE: Fan: OFF[0m
+[0;32mI (130381) GREENHOUSE: Pump: OFF[0m
+[0;32mI (130381) GREENHOUSE: Sending payload: {"temperature":0.0,"humidity":0.0,"soil_moisture":0.0}[0m
